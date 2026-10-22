@@ -4,7 +4,7 @@ int[] rastgeleSayilar = new int[10];
 for (int i = 0; i < rastgeleSayilar.Length; i++)
 {
     rastgeleSayilar[i] = rnd.Next(0, 100);
-    Console.WriteLine("Rastgele " + (i+1) + ". sayı: " + rastgeleSayilar[i]);
+    Console.WriteLine("Rastgele " + (i + 1) + ". sayı: " + rastgeleSayilar[i]);
 }
 
 int enb = rastgeleSayilar[0];
@@ -36,18 +36,23 @@ Console.WriteLine("Değerler arasında en büyük sayının giriş sırası " + 
 Console.WriteLine("Değerler arasında en küçük sayı " + enk.ToString());
 Console.WriteLine("Değerler arasında en büyük sayının giriş sırası " + kacinciSayi2.ToString());
 
+int cs = 0;
+int ts = 0;
+
 foreach (int ct in rastgeleSayilar)
 {
     if ((ct % 2) < 1)
     {
-        Console.WriteLine("Çift Sayı: " + ct.ToString());
+        cs++;
     }
     else
     {
-        Console.WriteLine("Tek Sayı: " + ct.ToString());
+        ts++;
     }
-
 }
+
+Console.WriteLine("Toplam Çift Sayıların adedi: " + cs);
+Console.WriteLine("Toplam Tek Sayıların adedi: " + ts);
 
 Console.WriteLine("Lütfen bir sayı giriniz:");
 int deger;
@@ -64,7 +69,7 @@ foreach (int sayi in rastgeleSayilar)
 {
     if (deger < sayi)
     {
-        Console.WriteLine( sayi + " sayısı girdiğiniz sayıdan büyüktür");
+        Console.WriteLine(sayi + " sayısı girdiğiniz sayıdan büyüktür");
         test = true;
     }
 }
